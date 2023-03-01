@@ -19,8 +19,8 @@ function Get-RandomPassword {
     return (-join $result)
 
 }
-  for($i = 0; $i -lt <amount_of_passwords>; $i++) {
-    $passwords += ,(Get-RandomPassword <password_length>)
+  for($i = 0; $i -lt <amount_of_passwords>; $i++) { #change <amount_of_passwords> to the amount of passwords you want to generate
+    $passwords += ,(Get-RandomPassword <password_length>) #change <password_length> to the length of the passwords you want to generate
   }
 function passObj {
   for ($i = 0; $i -lt $passwords.length; $i++) {
